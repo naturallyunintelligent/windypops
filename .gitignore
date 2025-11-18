@@ -1,0 +1,10 @@
+.idea
+.venv
+.python-version
+launch.json
+secrets.ini
+data/
+*.egg-info/
+__pycache__/
+.env
+error.log

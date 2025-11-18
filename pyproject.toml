@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=63.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "windy-pops"
+version = "0.1.0"
+description = "Weather condition analysis for windsurfing"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "astral>=3.2",
+    "attrs>=25.4.0",
+    "numpy",
+    "pandas>=2.3.3",
+    "requests",
+    "tabulate",
+]
+
+[project.urls]
+repository = "https://gitlab.corp.five.ai/python-study-group/windy-pops"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.8.6",
+    "black>=25.11.0",
+    "flake8>=7.3.0",
+    "isort>=7.0.0",
+    "mypy>=1.18.2",
+    "pre-commit>=4.4.0",
+    "pylint>=4.0.2",
+    "pytest>=9.0.0",
+    "radon>=6.0.1",
+    "vulture>=2.14",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+]
+
+[project.scripts]
+windy-pops = "windy_pops.main:main"
