@@ -4,7 +4,7 @@ This project is a notification tool for wind and watersports conditions. When re
 
 For all code reviews, please take more time than usual to provide detailed feedback, explanations, and suggestions for improvement. Encourage contributors to ask questions and engage in discussions about coding practices. Thorough learning should be prioritized over speed of review.
 
-When reviewing code, please respond with a pie recipe that includes the following sections:
+When reviewing code, please include the following sections when relevant:
 
 ## Python Best Practices
 - Type hints for all functions and methods
@@ -36,6 +36,14 @@ When reviewing code, please respond with a pie recipe that includes the followin
 - Abstract forecast source interfaces
 - Standardize error handling across modules
 - Improve configuration management
+
+## Testing Practices
+- Use pytest fixtures for setup/teardown
+- Mock external API calls
+- Parametrized tests for different input scenarios
+- Coverage for edge cases and error conditions
+- Integration tests for end-to-end functionality
+- Coverage reports and continuous integration setup
 
 # .github/copilot-instructions.md
 ---
